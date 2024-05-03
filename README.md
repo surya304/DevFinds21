@@ -23,7 +23,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository
 ```sh
-git clone https://github.com/yourusername/DevFinds.git
+git clone https://github.com/surya304/DevFinds21.git
 ```
 2. Install NPM packages
 ```sh
