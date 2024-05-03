@@ -1,0 +1,39 @@
+# Pixels to REM
+
+To convert `pixel` to `rem` in HTML, you can use the following formula:
+
+**rem** = **pixel_value** / **root_element_font_size**
+
+The root element in an HTML document is the html element, which serves as the root of the document tree and can be used to set default font size for the whole document. 
+
+The default font size of the root element is typically `16 pixels`, but it can be changed using CSS.
+
+For example, to convert `16px` to `rem` with a default root element font size of `16px`, you would use the following calculation:
+
+rem = 16px / 16px = 1rem
+
+If the root element's font size is different, you would need to use that value in the formula. 
+
+For example, if the root element's font size is `24px`, the conversion would be:
+
+rem = 16px / 24px = 0.66667rem
+
+You can use the `rem` unit in your HTML by specifying it in your CSS styles or inline styles, like this:
+
+```css {{ title: 'CSS Style Sheet' }}
+.my-element {
+  font-size: 1rem;
+}
+
+```
+
+```html {{ title: 'HTML Code' }}
+<div style="font-size: 1rem;">My text goes here</div>
+```
+
+**Note:** `rem` unit is relative to the root element's font size, changes to the root element's font size will affect all elements using `rem` units in the document.
+
+
+
+
+

@@ -1,0 +1,32 @@
+# Pixels to EM
+
+To convert `pixel` to `em` in HTML, you can use the following formula:
+
+**em** = **pixel_value** / **parent_element_font_size**
+
+For example, if you want to convert a `16px` to `em` and the font size of the parent element is `16px`:
+
+em = 16px / 16px = 1em
+
+If the font size of the parent element is different, you would need to use that value in the formula. 
+
+For example, if the font size of the parent element is `24px`:
+
+em = 16px / 24px = 0.66667em
+
+It's important to note that the parent element's font size will be used as the base value for the conversion.
+
+Always consider the font size hierarchy when converting pixels to ems.
+
+
+You can use the em unit in your HTML by specifying it in your CSS styles or inline styles, like this:
+
+```css {{ title: 'CSS Style Sheet' }}
+.my-element {
+  font-size: 1em;
+}
+```
+
+```html {{ title: 'HTML Code' }}
+<div style="font-size: 1em;">Here goes my text</div>
+```

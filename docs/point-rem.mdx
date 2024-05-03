@@ -1,0 +1,56 @@
+# Point to REM
+
+`rem` is a relative unit of measurement that is based on the root element's font size. 
+
+The root element is the highest level element in the HTML document, and is usually the `html` tag. 
+
+The font size of the root element is usually set to `16px` by default, so `1rem` = `16px` by default.
+
+`point` value to a `rem` value conversions formula:
+
+**rem value** = **point value** / **font size of root element**
+
+For example, if the font size of the root element is `16px`, and you want to convert a `point` value of `32pt` to `rem`:
+
+rem value = 32 / 16 = 2rem
+
+
+```css {{ title: 'CSS Style Sheet' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: 32pt; /* element has a font size of 2rem (32 / 16) */
+}
+
+.child {
+  font-size: 8pt; /* child element has a font size of 0.5rem (8 / 16) */
+}
+
+
+```
+
+You can also use the `calc` function in CSS to convert `point` values to `rem` values.
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: calc(32pt / 16px); /* element has a font size of 2rem (32 / 16) */
+}
+
+.child {
+  font-size: calc(8pt / 16px); /* child element has a font size of 0.5rem (8 / 16) */
+}
+
+
+```
+
+
+**Note:** You can change the font size of the root element by setting a different value for the font-size property of the html element. 
+
+For example, if you set the font-size of the html element to `20px`, then `1rem` = `20px`.
+

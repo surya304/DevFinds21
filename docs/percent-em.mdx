@@ -1,0 +1,49 @@
+# Percentage to EM
+
+`em` unit is a relative unit of measurement that is based on the font size of the element in which it is used. 
+
+1 em is equal to the font size of the element.
+
+`percentage` value to an `em` value conversion formula:
+
+**em value** = (**percentage value** * **font size of parent element**) / 100
+
+For example, if the font size of the parent element is `16px`, and you want to convert a percentage value of `12.5%` to em:
+
+em value = (12.5 * 16) / 100 = 2em
+
+
+```css {{ title: 'CSS Style Sheet' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: 12.5%; /* child element has a font size of 2em (12.5 * 16 / 100) */
+}
+
+.grandchild {
+  font-size: 50%; /* grandchild element has a font size of 0.5em (50 * 16 / 100) */
+}
+```
+
+You can also use the `calc` function in CSS to convert `percentage` values to `em` values. 
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: calc(12.5% * 16px / 100); /* child element has a font size of 2em (12.5 * 16 / 100) */
+}
+
+.grandchild {
+  font-size: calc(50% * 16px / 100); /* grandchild element has a font size of 0.5em (50 * 16 / 100) */
+}
+
+```
+
+
+
+

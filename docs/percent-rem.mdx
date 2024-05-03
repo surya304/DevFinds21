@@ -1,0 +1,51 @@
+# Percentage to REM
+
+`rem` is a relative unit of measurement that is based on the root element's font size. 
+
+The root element is the highest level element in the HTML document, and is usually the `html` tag. 
+
+Font size of the root element is usually set to 16px by default, so `1rem` = `16px` by default.
+
+`percentage` value to `rem` conversion formula:
+
+**rem value** = (**percentage value** * **font size of root element**) / 100
+
+For example, if the font size of the root element is `16px`, and you want to convert a `percentage` value of `12.5%` to `rem`:
+
+rem value = (12.5 * 16) / 100 = 2rem
+
+
+```css {{ title: 'CSS Style Sheet' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: 12.5%; /* element has a font size of 2rem (12.5 * 16 / 100) */
+}
+
+.child {
+  font-size: 50%; /* child element has a font size of 0.5rem (50 * 16 / 100) */
+}
+```
+
+You can also use the `calc` function in CSS to convert `percentage` values to `rem` values.
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: calc(12.5% * 16px / 1rem); /* element has a font size of 2rem (12.5 * 16 / 100) */
+}
+
+.child {
+  font-size: calc(50% * 16px / 1rem); /* child element has a font size of 0.5rem (50 * 16 / 100) */
+}
+
+```
+
+
+
+

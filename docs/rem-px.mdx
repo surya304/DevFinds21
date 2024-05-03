@@ -1,0 +1,55 @@
+# REM to Pixels
+
+`rem` unit is a relative unit of measurement that is based on the root element's font size. 
+
+The root element is the highest level element in HTML document, and is usually the `html` tag. 
+
+The font size of root element is usually set to 16px by default, so `1rem` = `16px` by default.
+
+`rem` value to `pixels` conversion formula:
+
+**pixel value** = **rem value** * **font size** of root element
+
+For example, if font size of the root element is `16px`, and you want to convert a rem value of `2rem` to pixels, you can use the following calculation:
+
+pixel value = 2 * 16 = 32px
+
+
+```css {{ title: 'CSS Style Sheet' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: 2rem; /* element has a font size of 32px (2 * 16) */
+}
+
+.child {
+  font-size: 0.5rem; /* child element has a font size of 8px (0.5 * 16) */
+}
+```
+
+You can also use the `calc` function in CSS to convert `rem` values to `pixels`.
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+html {
+  font-size: 16px; /* font size of root element */
+}
+
+.element {
+  font-size: calc(2rem * 16px); /* element has a font size of 32px (2 * 16) */
+}
+
+.child {
+  font-size: calc(0.5rem * 16px); /* child element has a font size of 8px (0.5 * 16) */
+}
+```
+
+**Note:** You can change the font size of the root element by setting a different value for font-size property of the html element. 
+
+For example, if you set the font-size of the html element to 20px, then 1rem = 20px.
+
+
+
+
+

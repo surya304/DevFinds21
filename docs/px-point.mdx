@@ -1,0 +1,33 @@
+# Pixels to Point
+
+To convert `pixel` to `point` in HTML, you can use the following formula:
+
+**point** = **pixel_value** * (**72** / **96**)
+
+This formula converts pixels to points using a standard conversion rate of `72 points` per inch and a default screen resolution of `96 pixels` per inch.
+
+For example, to convert a pixel value of 16 to points, you would use the following calculation:
+
+point = 16px * (72 / 96) = 12pt
+
+You can use the point unit in your HTML by specifying it in your CSS styles or inline styles, like this:
+
+```css {{ title: 'CSS Style Sheet' }}
+.my-element {
+  font-size: 12pt;
+}
+```
+
+```html {{ title: 'HTML Code' }}
+<div style="font-size: 12pt;">My text goes here</div>
+```
+
+**Note:** `point` unit is primarily used for print design and is not well supported on the web. 
+
+It's generally recommended to use `pixels` or other relative units (such as `em` or `percentage`) for font sizes and dimensions on the web.
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+# Point to EM
+
+`em` is a relative unit of measurement that is based on the font size of the element in which it is used. 
+
+1em = the font size of the element.
+
+`point` value to `em` value conversion formula:
+
+**em value** = **point value** / **font size of parent element**
+
+For example, if the font size of the parent element is `16px`, and you want to convert a `point` value of `32pt` to `em`:
+
+em value = 32 / 16 = 2em
+
+
+```css {{ title: 'CSS Style Sheet' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: 32pt; /* child element has a font size of 2em (32 / 16) */
+}
+
+.grandchild {
+  font-size: 8pt; /* grandchild element has a font size of 0.5em (8 / 16) */
+}
+```
+
+You can also use the `calc` function in CSS to convert `point` values to `em` values. 
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: calc(32pt / 16px); /* child element has a font size of 2em (32 / 16) */
+}
+
+.grandchild {
+  font-size: calc(8pt / 16px); /* grandchild element has a font size of 0.5em (8 / 16) */
+}
+
+```
+
+
+
+

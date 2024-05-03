@@ -1,0 +1,25 @@
+# Pixels to Percentage
+
+To convert `pixel` to `percentage` in HTML, you can use the following formula:
+
+**percentage** = (**pixel_value** / **parent_element_dimension**) * **100**
+
+The parent element's dimension refers to the `width` or `height` of the element, depending on which dimension you want to convert. 
+
+For example, to convert a `pixel` value for `width` to a `percentage`, use the parent element's width as the base value.
+
+Here's an example of converting `200px` to `percentage`, using a parent element with a width of `800px`:
+
+percentage = (200px / 800px) * 100 = 25%
+
+You can use the percentage unit in your HTML by specifying it in your CSS styles or inline styles, like this:
+
+```css {{ title: 'CSS Style Sheet' }}
+.my-element {
+  width: 25%;
+}
+```
+
+```html {{ title: 'HTML Code' }}
+<div style="width: 25%;">My element goes here</div>
+```

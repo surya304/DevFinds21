@@ -1,0 +1,59 @@
+# Point to Pixels
+
+pixel `px` is a fixed unit of measurement that is independent of the font size of the element in which it is used. 
+
+1 pixel = 1 dot on the screen.
+
+`point` value to `pixels` conversion formula:
+
+**pixel value** = **point value** / (**points per pixel** * **font size of parent element**)
+
+The points per pixel value depends on the display resolution and can vary from device to device. 
+
+A common value for the points per pixel is `0.75`, which is based on a display resolution of `96dpi`.
+
+For example, if the font size of the parent element is `16px`, and you want to convert a `point` value of `32pt` to `pixels`:
+
+pixel value = 32 / (0.75 * 16) = 8px
+
+
+```css {{ title: 'CSS Style Sheet' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: 32pt; /* child element has a font size of 8px (32 / 0.75 / 16) */
+}
+
+.grandchild {
+  font-size: 8pt; /* grandchild element has a font size of 2px (8 / 0.75 / 16) */
+}
+
+```
+
+You can also use the `calc` function in CSS to convert `point` values to `pixels`.
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: calc(32pt / (0.75 * 16px)); /* child element has a font size of 8px (32 / 0.75 / 16) */
+}
+
+.grandchild {
+  font-size: calc(8pt / (0.75 * 16px)); /* grandchild element has a font size of 2px (8 / 0.75 / 16) */
+}
+
+```
+
+**Note:** The points per pixel value may vary depending on the display resolution of your device. 
+
+You can use a different value for the points per pixel depending on the display resolution you are targeting.
+
+
+
+
+

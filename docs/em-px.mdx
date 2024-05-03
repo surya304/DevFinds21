@@ -1,0 +1,50 @@
+# EM to Pixels
+
+`em` unit is a relative unit of measurement that is based on the font size of the element. 
+
+1 em is equal to font size of the element. 
+
+For example, if font size of an element is 16px, then `1em` = `16px`.
+
+`em` value to `pixels` conversion formula:
+
+**pixel value** = **em value** * **font size** of parent element
+
+For example, if font size of the parent element is `16px`, and you want to convert an em value of `2em` to pixels:
+
+pixel value = 2 * 16 = 32px
+
+
+```css {{ title: 'CSS Style Sheet' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: 2em; /* child element has a font size of 32px (2 * 16) */
+}
+
+.grandchild {
+  font-size: 0.5em; /* grandchild element has a font size of 8px (0.5 * 16) */
+}
+```
+
+You can also use the `calc` function in CSS to convert `em` values to `pixels`.
+
+```css {{ title: 'CSS Style Sheet with calc function' }}
+.element {
+  font-size: 16px; /* font size of parent element */
+}
+
+.child {
+  font-size: calc(2em * 16px); /* child element has a font size of 32px (2 * 16) */
+}
+
+.grandchild {
+  font-size: calc(0.5em * 16px); /* grandchild element has a font size of 8px (0.5 * 16) */
+}
+```
+
+
+
+

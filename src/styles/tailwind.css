@@ -1,0 +1,43 @@
+:root {
+  --shiki-color-text: theme('colors.white');
+  --shiki-token-constant: theme('colors.emerald.300');
+  --shiki-token-string: theme('colors.emerald.300');
+  --shiki-token-comment: theme('colors.zinc.500');
+  --shiki-token-keyword: theme('colors.sky.300');
+  --shiki-token-parameter: theme('colors.pink.300');
+  --shiki-token-function: theme('colors.violet.300');
+  --shiki-token-string-expression: theme('colors.emerald.300');
+  --shiki-token-punctuation: theme('colors.zinc.200');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #__next {
+  min-height: 100%;
+}
+
+.code-block {
+  position: relative;
+}
+
+.copy-button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+}
+
+.copy-button-container button {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+.copy-button-container button:hover {
+  background-color: #ddd;
+} */
