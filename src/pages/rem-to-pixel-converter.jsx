@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { StyleConverter } from '@/components/StyleConverter'
+import mixpanel from '@/lib/mixpanel.js'
 
 
 const CodeEditor = dynamic(() => import('../components/CodeEditorTwo'), {
@@ -13,9 +14,16 @@ const CodeEditor = dynamic(() => import('../components/CodeEditorTwo'), {
 
 
 
+console.log('Page Loaded: REM to Pixel Converter')
+mixpanel.track('Page View', {
+  page: 'REM to Pixel Converter',
+})
 
 
 export default function HMAC() {
+
+
+
   
   const openDropdown = (parent, child) => {
     const updateArray = navigation.map((section) => {
